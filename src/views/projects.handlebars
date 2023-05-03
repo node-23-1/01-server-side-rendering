@@ -1,1 +1,9 @@
 <h1>Mis proyectos...</h1>
+
+{{#each projects}}
+    <div>
+        <a href="/projects/{{this.id}}">
+            {{this.name}}
+        </a>
+    </div>
+{{/each}}

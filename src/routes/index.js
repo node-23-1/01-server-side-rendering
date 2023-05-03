@@ -1,5 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const team = require('../team.json');
+const projects = require('../projects.json');
+// import team from 'team.json'
 
 // colocar las rutas aquí
 router.get('/', (req, res) => {
@@ -11,7 +14,8 @@ router.get('/about-us', (req, res) => {
 });
 
 router.get('/team', (req, res) => {
-    res.render("team");
+    console.log(team);
+    res.render("team", { team });
 });
 
 router.get('/team/:name', (req, res) => {
@@ -24,7 +28,7 @@ router.get('/team/:name', (req, res) => {
 // })
 
 router.get('/projects', (req, res) => {
-    res.render("projects");
+    res.render("projects", { projects });
 })
 
 router.get('/projects/:id', (req, res) => {

@@ -3,3 +3,11 @@
 <p>
     Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit ut, mollitia magnam asperiores atque itaque dolorem voluptatum exercitationem in! Inventore a architecto sequi doloremque enim voluptate dolores deleniti libero numquam.
 </p>
+
+{{#each team}}
+    <div>
+        <a href="/team/{{this.name}}">
+            {{this.name}}
+        </a>
+    </div>
+{{/each}}
